@@ -1,113 +1,148 @@
 .svgcontainer3 {
-	width: 300px;
-	height: 400px;
-	border: 1px solid;
-	background-color: blue;
-	fill: yellow;
-	stroke: purple;
-	stroke-width: 1;
+  width: 40vw;
+  height: 56vw;
+  border: 1px solid;
+  background-color: blue;
+  fill: yellow;
+  stroke: purple;
+  stroke-width: 1;
 }
+
 .svgcontainer {
-	width: 200px;
-	height: 400px;
-	border: 1px solid;
-	background-color: blue;
-	fill: yellow;
-	stroke: purple;
-	stroke-width: 1;
+  width: 40vw;
+  height: 56vw;
+  border: 1px solid;
+  background-color: blue;
+  fill: yellow;
+  stroke: purple;
+  stroke-width: 1;
 }
+
 .svgcontainer2 {
-	width: 200px;
-	height: 400px;
-	border: 1px solid;
-	background-color: green;
-	fill: yellow;
-	stroke: purple;
-	stroke-width: 1;
+  width: 200px;
+  height: 400px;
+  border: 1px solid;
+  background-color: green;
+  fill: yellow;
+  stroke: purple;
+  stroke-width: 1;
 }
+
 #turned {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(40deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
 }
+
 #turned1 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(80deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
 }
+
 #turned2 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(120deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
 }
+
 #turned3 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(160deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(160deg);
+          transform: rotate(160deg);
 }
+
 #turned4 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(200deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(200deg);
+          transform: rotate(200deg);
 }
+
 #turned5 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(240deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
 }
+
 #turned6 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(280deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(280deg);
+          transform: rotate(280deg);
 }
+
 #turned7 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(320deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(320deg);
+          transform: rotate(320deg);
 }
+
 #turned8 {
-	transform-box: filled;
-	transform-origin: center;
-	transform: rotate(360deg);
+  transform-box: filled;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
+
 .fronts.svgcontainer {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-	column-gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (14vw)[4];
+      grid-template-rows: repeat(4, 14vw);
+  gap: 10%;
 }
-div.svgcontainer {
-	div {
-		min-width: 0px;
-		height: auto;
-		min-height: 0px;
-		max-height: 120px;
-		svg {
-			display: block;
-			margin: auto;
-			max-width: 20px;
-			height: auto;
-			max-height: 120px;
-		}
-	}
+
+div.svgcontainer div {
+  min-width: 0px;
+  height: auto;
+  min-height: 0px;
+  max-height: 16vw;
 }
+
 div.row {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
+
 div.two {
-	grid-column-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
 }
+
 div.row.title {
-	max-height: 40px;
-	text-align: center;
-	align-items: center;
-	font-size: 20px;
-	padding: 6px;
-	svg {
-		max-height: 30px;
-		margin: 0px;
-		max-width: 20%;
-	}
+  font-size: 4vw;
+  padding: 6px;
 }
+
+.unit {
+  max-width: 8vw;
+  max-height: 8vw;
+}
+
+div.title svg {
+  max-width: 4vw;
+  max-height: 4vw;
+}
+/*# sourceMappingURL=styles.css.map */

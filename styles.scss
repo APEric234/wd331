@@ -1,0 +1,113 @@
+$card-width: 40vw;
+$card-height: $card-width*1.4;
+$font-size-number: $card-width * 0.1;
+$icon-size: $card-width / 5;
+$row_height:$card-height/4;
+.svgcontainer3 {
+	width: $card-width;
+	height: $card-height;
+	border: 1px solid;
+	background-color: blue;
+	fill: yellow;
+	stroke: purple;
+	stroke-width: 1;
+}
+.svgcontainer {
+	width: $card-width;
+	height: $card-height;
+	border: 1px solid;
+	background-color: blue;
+	fill: yellow;
+	stroke: purple;
+	stroke-width: 1;
+}
+.svgcontainer2 {
+	width: 200px;
+	height: 400px;
+	border: 1px solid;
+	background-color: green;
+	fill: yellow;
+	stroke: purple;
+	stroke-width: 1;
+}
+#turned {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(40deg);
+}
+#turned1 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(80deg);
+}
+#turned2 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(120deg);
+}
+#turned3 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(160deg);
+}
+#turned4 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(200deg);
+}
+#turned5 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(240deg);
+}
+#turned6 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(280deg);
+}
+#turned7 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(320deg);
+}
+#turned8 {
+	transform-box: filled;
+	transform-origin: center;
+	transform: rotate(360deg);
+}
+.fronts.svgcontainer {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4,$row_height);
+	gap: 10%;
+}
+div.svgcontainer {
+	div {
+		min-width: 0px;
+		height: auto;
+		min-height: 0px;
+		max-height: $icon-size*2;
+
+	}
+}
+div.row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+}
+div.two {
+	grid-column-start: 2;
+}
+div.row.title {
+
+	font-size: $font-size-number;
+	padding: 6px;
+}
+.unit{
+	max-width: $icon-size;
+	max-height: $icon-size;
+}
+div.title svg{
+	max-width: $icon-size/2;
+	max-height: $icon-size/2;
+}
