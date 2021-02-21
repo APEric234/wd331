@@ -1,8 +1,8 @@
 $card-width: 40vw;
 $card-height: $card-width*1.4;
-$font-size-number: $card-width * 0.1;
-$icon-size: $card-width / 5;
-$row_height:$card-height/4;
+$font-size-number: $card-width * 0.2;
+$icon-size: $card-width / 2.5;
+$row_height:$card-height/3;
 .svgcontainer3 {
 	width: $card-width;
 	height: $card-height;
@@ -95,11 +95,15 @@ div.two {
 div.row.title {
 	font-size: $font-size-number;
 	padding: 6px;
+	
 }
 
 .unit{
 	max-width: $icon-size;
 	max-height: $icon-size;
+	padding-bottom:10px;
+	padding-top:10px;
+	
 }
 
 div.title svg{

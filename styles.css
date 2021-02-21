@@ -105,8 +105,8 @@
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: (14vw)[4];
-      grid-template-rows: repeat(4, 14vw);
+  -ms-grid-rows: (18.66667vw)[4];
+      grid-template-rows: repeat(4, 18.66667vw);
   gap: 10%;
 }
 
@@ -125,17 +125,19 @@ div.two {
 }
 
 div.row.title {
-  font-size: 4vw;
+  font-size: 8vw;
   padding: 6px;
 }
 
 .unit {
-  max-width: 8vw;
-  max-height: 8vw;
+  max-width: 16vw;
+  max-height: 16vw;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 div.title svg {
-  max-width: 4vw;
-  max-height: 4vw;
+  max-width: 8vw;
+  max-height: 8vw;
 }
 /*# sourceMappingURL=styles.css.map */
