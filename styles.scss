@@ -1,8 +1,8 @@
 $card-width: 40vw;
 $card-height: $card-width*1.4;
-$font-size-number: $card-width * 0.2;
-$icon-size: $card-width / 2.5;
-$row_height:$card-height/3;
+$font-size-number: $card-width * 0.15;
+$icon-size: $card-width / 5;
+$row_height:$card-height/5.5;
 .svgcontainer3 {
 	width: $card-width;
 	height: $card-height;
@@ -77,27 +77,45 @@ $row_height:$card-height/3;
 }
 .fronts.svgcontainer {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(4,$row_height);
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(6,$row_height);
 	gap: 10%;
 }
-
 div.row {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+}
+div.row.title{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1fr;
-}
-
-div.two {
-	grid-column-start: 2;
-}
-
-div.row.title {
 	font-size: $font-size-number;
 	padding: 6px;
-	
+}
+div.row.footer{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	font-size: $font-size-number;
+	padding: 6px;
+	div{
+		grid-column-start: 4;
+	}
 }
 
+svg.three {
+	grid-column-start: 4;
+}
+svg.two {
+	grid-column-start: 3;
+}
+svg.one {
+	grid-column-start: 2;
+}
+div.four svg{
+	transform: rotate(180deg);
+}
 .unit{
 	max-width: $icon-size;
 	max-height: $icon-size;
@@ -107,6 +125,11 @@ div.row.title {
 }
 
 div.title svg{
-	max-width: $icon-size/2;
-	max-height: $icon-size/2;
+	max-width: $icon-size/3;
+	max-height: $icon-size/3;
+}
+div.footer svg{
+	max-width: $icon-size/3;
+	max-height: $icon-size/3;
+	transform: rotate(180deg);
 }
