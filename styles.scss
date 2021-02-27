@@ -75,44 +75,81 @@ $row_height:$card-height/5.5;
 	transform-origin: center;
 	transform: rotate(360deg);
 }
-.fronts.svgcontainer {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(6,$row_height);
-	gap: 10%;
-}
-div.row {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: 1fr;
-}
-div.row.title{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr;
-	font-size: $font-size-number;
-	padding: 6px;
-}
-div.row.footer{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr;
-	font-size: $font-size-number;
-	padding: 6px;
-	div{
+
+@supports (display: grid) {
+	.fronts.svgcontainer {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(6,$row_height);
+		gap: 10%;
+	}
+	div.row {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 1fr;
+	}
+	div.row.title{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		font-size: $font-size-number;
+		padding: 6px;
+	}
+	div.row.footer{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		font-size: $font-size-number;
+		padding: 6px;
+		div{
+			grid-column-start: 4;
+		}
+	}
+	
+	svg.three {
 		grid-column-start: 4;
 	}
-}
+	svg.two {
+		grid-column-start: 3;
+	}
+	svg.one {
+		grid-column-start: 2;
+	}
+	// All of your flexbox SCSS code here.            
+}  
 
-svg.three {
-	grid-column-start: 4;
-}
-svg.two {
-	grid-column-start: 3;
-}
-svg.one {
-	grid-column-start: 2;
-}
+@supports not (display: grid) {
+	// All of your flexbox SCSS code here.
+	.fronts.svgcontainer {
+		display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+		}
+	div.row {
+		display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	}
+	div.row.title{
+		display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+		font-size: $font-size-number;
+		padding: 6px;
+	}
+	div.row.footer{
+		display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+		font-size: $font-size-number;
+		padding: 6px;
+
+	}
+	
+      
+}  
 div.four svg{
 	transform: rotate(180deg);
 }

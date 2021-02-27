@@ -100,65 +100,121 @@
           transform: rotate(360deg);
 }
 
-.fronts.svgcontainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: (10.18182vw)[6];
-      grid-template-rows: repeat(6, 10.18182vw);
-  gap: 10%;
+@supports (display: grid) {
+  .fronts.svgcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
+    -ms-grid-rows: (10.18182vw)[6];
+        grid-template-rows: repeat(6, 10.18182vw);
+    gap: 10%;
+  }
+  div.row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  div.row.title {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    font-size: 6vw;
+    padding: 6px;
+  }
+  div.row.footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    font-size: 6vw;
+    padding: 6px;
+  }
+  div.row.footer div {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+  svg.three {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+  svg.two {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+  }
+  svg.one {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
 }
 
-div.row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-}
-
-div.row.title {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  font-size: 6vw;
-  padding: 6px;
-}
-
-div.row.footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  font-size: 6vw;
-  padding: 6px;
-}
-
-div.row.footer div {
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-}
-
-svg.three {
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-}
-
-svg.two {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-}
-
-svg.one {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+@supports not (display: grid) {
+  .fronts.svgcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.row.title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-size: 6vw;
+    padding: 6px;
+  }
+  div.row.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-size: 6vw;
+    padding: 6px;
+  }
 }
 
 div.four svg {
